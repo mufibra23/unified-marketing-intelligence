@@ -1,0 +1,25 @@
+# Environment
+venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE / Local config
+.vscode/
+.idea/
+.claude/
+
+# Data (processed/exports are regenerable)
+data/processed/
+data/exports/
+
+# Dataiku
+dataiku/project_export/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

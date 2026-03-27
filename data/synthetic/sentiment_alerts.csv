@@ -1,0 +1,25 @@
+date,alert_type,severity,description,affected_segment,recommended_action
+2025-04-02,topic_shift,medium,Unusual volume of support tickets about billing,Loyal Customers,Check billing system for errors
+2025-05-04,sentiment_spike,high,Star rating average dropped below 3.0,Hibernating,Investigate product quality reports
+2025-05-07,negative_volume,medium,New negative topic cluster: 'payment issues',At Risk,Investigate product quality reports
+2025-05-14,topic_shift,high,Social media mentions turned negative overnight,Loyal Customers,Check billing system for errors
+2025-05-21,negative_volume,medium,Social media mentions turned negative overnight,Champions,Investigate product quality reports
+2025-06-24,negative_volume,medium,Unusual volume of support tickets about billing,At Risk,Escalate to customer success team
+2025-07-04,negative_volume,medium,New negative topic cluster: 'payment issues',Loyal Customers,Review recent app update feedback
+2025-07-06,topic_shift,low,Negative sentiment spike in app_store reviews,Hibernating,Escalate to customer success team
+2025-07-11,topic_shift,high,New negative topic cluster: 'payment issues',Loyal Customers,Check billing system for errors
+2025-08-05,sentiment_spike,medium,Social media mentions turned negative overnight,At Risk,Prepare social media response
+2025-08-07,sentiment_spike,high,New negative topic cluster: 'payment issues',Hibernating,Review recent app update feedback
+2025-08-10,topic_shift,medium,Social media mentions turned negative overnight,At Risk,Escalate to customer success team
+2025-08-18,negative_volume,low,Unusual volume of support tickets about billing,Loyal Customers,Check billing system for errors
+2025-08-21,sentiment_spike,high,Star rating average dropped below 3.0,Hibernating,Escalate to customer success team
+2025-10-23,topic_shift,high,New negative topic cluster: 'payment issues',Champions,Prepare social media response
+2025-11-23,negative_volume,medium,Social media mentions turned negative overnight,Champions,Check billing system for errors
+2025-12-25,sentiment_spike,low,Negative sentiment spike in app_store reviews,Hibernating,Investigate product quality reports
+2026-01-26,negative_volume,low,Star rating average dropped below 3.0,Champions,Investigate product quality reports
+2026-02-11,negative_volume,low,Unusual volume of support tickets about billing,Loyal Customers,Investigate product quality reports
+2026-02-19,sentiment_spike,low,Unusual volume of support tickets about billing,At Risk,Prepare social media response
+2026-02-25,topic_shift,high,Unusual volume of support tickets about billing,At Risk,Prepare social media response
+2026-02-26,sentiment_spike,low,Star rating average dropped below 3.0,At Risk,Check billing system for errors
+2026-03-08,sentiment_spike,low,Star rating average dropped below 3.0,Hibernating,Prepare social media response
+2026-03-10,topic_shift,low,Star rating average dropped below 3.0,At Risk,Prepare social media response

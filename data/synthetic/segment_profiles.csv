@@ -1,0 +1,6 @@
+segment_id,segment_name,description,customer_count,avg_lifetime_value,avg_order_frequency,avg_recency_days,churn_rate,top_channel,avg_sentiment,recommended_action
+0,Champions,"High value, recent, frequent buyers",1361,3500.42,5.0,49,0.088,social_paid,-0.134,"Reward program, VIP access, cross-sell premium"
+1,Loyal Customers,Regular buyers with good spend,1077,271.17,9.4,169,0.177,display,-0.445,"Upsell campaigns, loyalty program enrollment"
+2,At Risk,"Were good customers, haven't bought recently",1102,816.45,3.0,90,0.13,email,0.426,"Win-back campaign, personalized discount, feedback survey"
+3,Hibernating,Low engagement across all metrics,729,1969.61,2.6,137,0.603,display,-0.425,"Re-engagement email series, steep discount offer"
+4,New Customers,"Recent first purchase, potential to grow",956,2399.53,13.5,115,0.146,email,0.147,"Onboarding sequence, welcome offer, product education"

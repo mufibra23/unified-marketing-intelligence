@@ -1,0 +1,501 @@
+path_id,touchpoints,path_length,converted,revenue,days_to_convert
+PATH-0001,paid_search > social_paid > display > paid_search > organic_search,5,True,440.02,9.0
+PATH-0002,organic_search > organic_search > referral,3,False,0.0,
+PATH-0003,paid_search > organic_search > organic_search,3,False,0.0,
+PATH-0004,social_organic > organic_search > social_organic > email > social_organic > email,6,True,110.04,10.0
+PATH-0005,paid_search > social_paid > social_organic > social_organic,4,False,0.0,
+PATH-0006,display > social_organic > referral > email > social_organic,5,False,0.0,
+PATH-0007,display > paid_search > email > referral > organic_search > paid_search,6,True,228.84,14.0
+PATH-0008,social_paid > display > referral > paid_search > direct > referral,6,False,0.0,
+PATH-0009,display > email > referral > organic_search > referral > display > social_organic,7,False,0.0,
+PATH-0010,referral > email,2,False,0.0,
+PATH-0011,direct > display,2,False,0.0,
+PATH-0012,direct > display > social_organic > social_paid,4,False,0.0,
+PATH-0013,email > social_paid > display,3,False,0.0,
+PATH-0014,paid_search > email > social_organic > organic_search,4,False,0.0,
+PATH-0015,paid_search > social_paid > referral > email > display,5,True,444.98,5.0
+PATH-0016,display > direct > social_paid > organic_search > direct > referral > display,7,True,374.13,22.0
+PATH-0017,direct > paid_search > display,3,False,0.0,
+PATH-0018,display > organic_search,2,False,0.0,
+PATH-0019,referral > email > referral > display,4,False,0.0,
+PATH-0020,paid_search > social_organic > display > social_organic > referral,5,True,92.23,11.0
+PATH-0021,social_paid > referral > paid_search > paid_search > referral,5,True,120.05,7.0
+PATH-0022,paid_search > paid_search > paid_search > email > display > organic_search > organic_search,7,False,0.0,
+PATH-0023,display > email > email > social_organic,4,False,0.0,
+PATH-0024,organic_search > display > email,3,True,476.63,2.0
+PATH-0025,social_organic > organic_search > display > email > referral,5,True,132.84,2.0
+PATH-0026,referral > display > email > social_paid > paid_search > social_organic,6,True,404.48,3.0
+PATH-0027,display > organic_search,2,False,0.0,
+PATH-0028,email > paid_search > social_organic > referral > display > paid_search > direct,7,False,0.0,
+PATH-0029,paid_search > social_paid > social_organic > social_paid > organic_search > paid_search > social_organic,7,False,0.0,
+PATH-0030,social_organic > email > organic_search > social_paid,4,True,459.11,14.0
+PATH-0031,organic_search > display > paid_search > paid_search > direct,5,False,0.0,
+PATH-0032,email > paid_search > referral,3,False,0.0,
+PATH-0033,social_organic > display,2,True,448.12,27.0
+PATH-0034,referral > email > social_paid,3,False,0.0,
+PATH-0035,email > email > display > email > display > direct > social_paid,7,True,448.05,19.0
+PATH-0036,direct > email,2,False,0.0,
+PATH-0037,paid_search > display,2,False,0.0,
+PATH-0038,paid_search > social_paid,2,False,0.0,
+PATH-0039,referral > social_organic > social_paid > display > display > direct,6,True,382.73,14.0
+PATH-0040,paid_search > paid_search > direct > referral > direct > referral > social_organic,7,True,51.73,9.0
+PATH-0041,paid_search > social_organic > paid_search > social_organic,4,True,420.67,24.0
+PATH-0042,direct > social_paid > organic_search > paid_search > referral > display,6,False,0.0,
+PATH-0043,organic_search > referral > paid_search > display > social_paid > referral > paid_search,7,True,278.88,28.0
+PATH-0044,email > display > social_paid > email > referral > organic_search > email,7,True,293.18,12.0
+PATH-0045,organic_search > organic_search > organic_search,3,True,240.35,21.0
+PATH-0046,social_organic > referral > social_paid,3,False,0.0,
+PATH-0047,display > social_organic > social_organic > social_paid > social_paid,5,False,0.0,
+PATH-0048,display > referral > paid_search > social_organic,4,False,0.0,
+PATH-0049,paid_search > referral > direct,3,False,0.0,
+PATH-0050,social_paid > direct > social_organic > direct > organic_search > social_organic > social_paid,7,True,104.49,11.0
+PATH-0051,paid_search > display > direct > direct > email,5,True,378.09,16.0
+PATH-0052,email > social_paid > referral > email > display,5,False,0.0,
+PATH-0053,organic_search > direct > referral > direct > display,5,False,0.0,
+PATH-0054,referral > paid_search > email > social_paid > social_organic,5,True,112.85,1.0
+PATH-0055,paid_search > display > paid_search > organic_search > social_organic > social_organic,6,False,0.0,
+PATH-0056,social_organic > referral > social_paid > paid_search > social_paid > social_paid > social_organic,7,True,471.07,10.0
+PATH-0057,organic_search > email > social_paid,3,False,0.0,
+PATH-0058,direct > paid_search > email,3,True,57.26,25.0
+PATH-0059,social_organic > direct > social_organic,3,False,0.0,
+PATH-0060,email > paid_search > referral,3,True,372.33,22.0
+PATH-0061,display > social_organic > social_paid > paid_search > social_organic > social_paid > social_paid,7,False,0.0,
+PATH-0062,direct > paid_search > organic_search > email > email > paid_search,6,False,0.0,
+PATH-0063,direct > social_paid > referral > organic_search,4,False,0.0,
+PATH-0064,email > social_organic > social_paid > display > social_paid,5,True,302.9,14.0
+PATH-0065,direct > referral > email > social_organic > email > email > display,7,False,0.0,
+PATH-0066,organic_search > social_organic > email > social_organic > referral > paid_search > social_paid,7,True,221.15,25.0
+PATH-0067,paid_search > display > paid_search,3,False,0.0,
+PATH-0068,social_paid > referral > social_organic,3,False,0.0,
+PATH-0069,display > direct > email > paid_search > display,5,False,0.0,
+PATH-0070,social_paid > paid_search > referral > paid_search,4,False,0.0,
+PATH-0071,social_paid > organic_search > social_organic > display > social_organic,5,False,0.0,
+PATH-0072,organic_search > organic_search > social_paid > email > paid_search,5,False,0.0,
+PATH-0073,direct > referral > referral > display > display,5,False,0.0,
+PATH-0074,social_organic > social_organic > display,3,True,58.55,8.0
+PATH-0075,display > direct > referral > email > organic_search > display > email,7,True,410.0,8.0
+PATH-0076,social_organic > organic_search > email > email > referral > paid_search > organic_search,7,True,62.45,13.0
+PATH-0077,referral > social_organic > social_paid > organic_search > paid_search > direct,6,False,0.0,
+PATH-0078,display > email > direct > referral > email,5,False,0.0,
+PATH-0079,direct > display,2,True,409.91,3.0
+PATH-0080,paid_search > email > social_organic > organic_search > referral,5,True,94.73,5.0
+PATH-0081,organic_search > paid_search > direct,3,False,0.0,
+PATH-0082,paid_search > organic_search > direct > email > paid_search > paid_search > organic_search,7,True,297.17,30.0
+PATH-0083,social_paid > organic_search > organic_search > email > email,5,False,0.0,
+PATH-0084,organic_search > direct > social_paid,3,True,456.82,23.0
+PATH-0085,organic_search > referral > referral > referral > referral > direct > organic_search,7,False,0.0,
+PATH-0086,direct > display > direct > paid_search,4,True,189.01,8.0
+PATH-0087,display > direct > email > direct,4,True,460.92,11.0
+PATH-0088,referral > social_organic > email > organic_search,4,False,0.0,
+PATH-0089,display > referral,2,False,0.0,
+PATH-0090,social_paid > email > paid_search,3,True,164.53,2.0
+PATH-0091,paid_search > display > referral > organic_search > direct > display,6,True,332.19,19.0
+PATH-0092,organic_search > direct > paid_search > social_paid > referral > organic_search > direct,7,False,0.0,
+PATH-0093,paid_search > referral > email,3,True,381.21,12.0
+PATH-0094,referral > social_paid > social_organic,3,False,0.0,
+PATH-0095,display > organic_search,2,True,246.49,19.0
+PATH-0096,referral > paid_search > display > referral,4,True,223.83,22.0
+PATH-0097,organic_search > direct,2,False,0.0,
+PATH-0098,organic_search > direct > display > social_paid > direct > email,6,False,0.0,
+PATH-0099,organic_search > social_organic > social_organic > email > direct > direct,6,False,0.0,
+PATH-0100,direct > paid_search > organic_search,3,False,0.0,
+PATH-0101,social_paid > direct,2,False,0.0,
+PATH-0102,referral > organic_search > display,3,True,406.37,3.0
+PATH-0103,email > direct > organic_search > social_organic > social_paid > direct,6,True,166.76,11.0
+PATH-0104,email > social_paid > social_paid,3,True,401.75,17.0
+PATH-0105,social_paid > email > organic_search > organic_search,4,False,0.0,
+PATH-0106,display > referral > social_paid,3,False,0.0,
+PATH-0107,social_organic > email,2,True,373.05,1.0
+PATH-0108,social_paid > paid_search,2,True,338.56,15.0
+PATH-0109,display > paid_search > paid_search,3,True,431.04,18.0
+PATH-0110,paid_search > social_organic > organic_search,3,True,421.89,9.0
+PATH-0111,social_paid > paid_search,2,False,0.0,
+PATH-0112,organic_search > email,2,True,63.26,10.0
+PATH-0113,social_paid > organic_search,2,False,0.0,
+PATH-0114,referral > social_organic > display > direct > referral > social_paid > referral,7,True,208.24,26.0
+PATH-0115,email > display > email > display > referral,5,True,452.41,26.0
+PATH-0116,direct > social_paid > referral > organic_search,4,False,0.0,
+PATH-0117,referral > display > email > referral > organic_search > organic_search,6,True,498.56,28.0
+PATH-0118,direct > social_organic > social_paid > direct,4,False,0.0,
+PATH-0119,social_paid > organic_search > direct > paid_search > email,5,False,0.0,
+PATH-0120,social_paid > email,2,False,0.0,
+PATH-0121,social_paid > social_organic > display > social_paid > display,5,False,0.0,
+PATH-0122,paid_search > paid_search,2,True,51.89,23.0
+PATH-0123,display > social_organic > email > paid_search,4,False,0.0,
+PATH-0124,social_organic > paid_search > paid_search,3,False,0.0,
+PATH-0125,referral > referral > paid_search > social_organic,4,False,0.0,
+PATH-0126,direct > social_organic > email > paid_search > social_paid,5,True,323.46,7.0
+PATH-0127,referral > social_organic > social_paid,3,False,0.0,
+PATH-0128,paid_search > display,2,True,417.01,8.0
+PATH-0129,email > referral > paid_search > email > email > direct,6,True,178.7,5.0
+PATH-0130,social_paid > email > paid_search > referral > social_paid > referral > paid_search,7,True,84.85,24.0
+PATH-0131,social_paid > social_paid > paid_search > display > social_paid > social_organic,6,False,0.0,
+PATH-0132,direct > direct > display,3,False,0.0,
+PATH-0133,paid_search > direct > social_paid > paid_search > social_organic > organic_search > social_organic,7,False,0.0,
+PATH-0134,social_organic > referral,2,True,360.07,11.0
+PATH-0135,display > social_paid > social_paid,3,False,0.0,
+PATH-0136,email > paid_search > paid_search > social_organic > organic_search > social_organic,6,False,0.0,
+PATH-0137,organic_search > display > referral > social_organic > social_organic > social_organic > paid_search,7,True,260.23,9.0
+PATH-0138,social_organic > display > social_organic > referral > paid_search > direct,6,False,0.0,
+PATH-0139,referral > paid_search > referral > social_organic > paid_search > organic_search,6,False,0.0,
+PATH-0140,email > organic_search > display,3,True,271.0,20.0
+PATH-0141,display > referral > social_organic,3,False,0.0,
+PATH-0142,display > paid_search > social_paid > paid_search > paid_search > display,6,False,0.0,
+PATH-0143,social_organic > referral > direct > social_organic > direct,5,True,192.24,4.0
+PATH-0144,social_organic > display > organic_search > email,4,False,0.0,
+PATH-0145,display > paid_search > referral > paid_search > social_organic,5,False,0.0,
+PATH-0146,paid_search > social_organic > paid_search > organic_search > referral > organic_search,6,True,490.86,29.0
+PATH-0147,referral > email > referral,3,False,0.0,
+PATH-0148,social_organic > referral > display,3,False,0.0,
+PATH-0149,referral > organic_search > social_paid > referral,4,False,0.0,
+PATH-0150,organic_search > direct > email > social_paid > referral > display > email,7,False,0.0,
+PATH-0151,direct > direct > email,3,False,0.0,
+PATH-0152,referral > social_paid > organic_search > organic_search > direct > social_paid > social_organic,7,True,98.37,6.0
+PATH-0153,organic_search > referral > paid_search > social_paid,4,True,164.44,2.0
+PATH-0154,display > social_paid > email,3,False,0.0,
+PATH-0155,social_paid > display > direct > display > referral > organic_search,6,True,299.38,29.0
+PATH-0156,social_organic > referral,2,False,0.0,
+PATH-0157,social_organic > direct > email,3,False,0.0,
+PATH-0158,email > referral > display > email > social_organic > organic_search,6,True,80.35,3.0
+PATH-0159,direct > paid_search > social_paid > referral,4,True,269.75,8.0
+PATH-0160,direct > display > organic_search > display > email > paid_search > referral,7,False,0.0,
+PATH-0161,email > direct > social_organic > display > referral > referral > paid_search,7,False,0.0,
+PATH-0162,referral > email > paid_search > paid_search > social_organic,5,False,0.0,
+PATH-0163,social_paid > direct > referral > direct > paid_search > social_paid,6,True,190.35,21.0
+PATH-0164,organic_search > email,2,False,0.0,
+PATH-0165,referral > organic_search > organic_search > social_organic > direct > email > display,7,True,413.82,24.0
+PATH-0166,direct > email,2,False,0.0,
+PATH-0167,social_paid > referral > social_paid > referral > direct > social_paid > social_organic,7,False,0.0,
+PATH-0168,organic_search > social_paid > direct > direct > organic_search,5,True,180.93,13.0
+PATH-0169,referral > social_paid > direct,3,True,96.7,1.0
+PATH-0170,direct > social_organic > social_organic,3,False,0.0,
+PATH-0171,referral > social_organic > social_organic > social_organic > direct > referral,6,False,0.0,
+PATH-0172,direct > display > social_organic > direct > referral,5,False,0.0,
+PATH-0173,display > direct > social_organic > display > social_paid > direct > email,7,False,0.0,
+PATH-0174,social_organic > display > paid_search > organic_search > paid_search > social_organic > direct,7,False,0.0,
+PATH-0175,social_paid > direct > direct > organic_search,4,False,0.0,
+PATH-0176,direct > direct > direct > email,4,False,0.0,
+PATH-0177,email > email > direct,3,False,0.0,
+PATH-0178,display > paid_search > email > social_paid,4,False,0.0,
+PATH-0179,display > email > organic_search > organic_search > paid_search > email,6,True,246.95,2.0
+PATH-0180,social_organic > organic_search > email > organic_search > paid_search > paid_search,6,False,0.0,
+PATH-0181,social_paid > social_organic > direct > email,4,True,496.94,22.0
+PATH-0182,direct > social_paid > paid_search > paid_search > social_organic > organic_search,6,True,245.47,6.0
+PATH-0183,social_organic > email,2,True,229.04,8.0
+PATH-0184,social_organic > social_paid > organic_search,3,False,0.0,
+PATH-0185,social_paid > social_paid > email > referral > display > display,6,False,0.0,
+PATH-0186,referral > referral > organic_search,3,True,479.5,3.0
+PATH-0187,organic_search > display > social_paid > display > paid_search,5,False,0.0,
+PATH-0188,paid_search > email > social_organic > social_organic > email > social_organic > social_paid,7,False,0.0,
+PATH-0189,organic_search > paid_search > organic_search > email > paid_search,5,True,459.77,18.0
+PATH-0190,referral > referral,2,True,311.16,30.0
+PATH-0191,social_paid > display > display > social_paid > social_paid,5,False,0.0,
+PATH-0192,direct > social_organic > display,3,False,0.0,
+PATH-0193,social_organic > social_organic > display > paid_search,4,False,0.0,
+PATH-0194,organic_search > social_organic > direct > social_organic > social_organic > referral,6,True,455.78,5.0
+PATH-0195,email > email > social_organic > paid_search > organic_search,5,False,0.0,
+PATH-0196,paid_search > paid_search > referral,3,False,0.0,
+PATH-0197,social_organic > referral > organic_search,3,False,0.0,
+PATH-0198,social_organic > referral > organic_search > organic_search > social_paid > organic_search,6,True,408.04,1.0
+PATH-0199,social_paid > referral > social_organic > display > referral,5,True,416.73,16.0
+PATH-0200,paid_search > display > display > social_paid > social_organic,5,False,0.0,
+PATH-0201,display > referral > social_paid > display > display > social_paid > organic_search,7,False,0.0,
+PATH-0202,social_paid > social_organic,2,False,0.0,
+PATH-0203,social_organic > referral > paid_search,3,False,0.0,
+PATH-0204,email > paid_search > social_paid > organic_search,4,False,0.0,
+PATH-0205,email > email > direct,3,False,0.0,
+PATH-0206,email > display,2,False,0.0,
+PATH-0207,direct > social_organic > organic_search > referral,4,True,312.07,24.0
+PATH-0208,referral > social_organic > direct > social_paid > display > display > social_paid,7,False,0.0,
+PATH-0209,paid_search > email > organic_search,3,True,216.68,10.0
+PATH-0210,display > display > referral,3,False,0.0,
+PATH-0211,social_organic > social_organic > display > direct > email > social_paid,6,False,0.0,
+PATH-0212,social_organic > organic_search > display > social_organic > social_paid > organic_search > display,7,False,0.0,
+PATH-0213,social_paid > paid_search > referral,3,True,70.01,5.0
+PATH-0214,referral > organic_search > referral > referral > social_paid > display,6,True,335.86,8.0
+PATH-0215,referral > social_paid > referral > organic_search,4,True,348.63,1.0
+PATH-0216,social_paid > email > direct > referral > social_paid > social_organic > social_paid,7,False,0.0,
+PATH-0217,social_organic > referral > referral > referral > referral,5,True,106.48,18.0
+PATH-0218,social_paid > display > social_organic > organic_search > social_organic,5,True,458.27,13.0
+PATH-0219,display > organic_search > social_organic > social_paid > referral > social_organic,6,False,0.0,
+PATH-0220,organic_search > social_paid > email > email > social_organic,5,True,157.78,30.0
+PATH-0221,paid_search > social_organic > referral > social_organic > display > social_organic > referral,7,True,457.93,8.0
+PATH-0222,email > social_paid > paid_search,3,True,457.83,30.0
+PATH-0223,email > social_organic,2,False,0.0,
+PATH-0224,email > organic_search,2,True,369.06,29.0
+PATH-0225,social_paid > referral > social_organic > direct > referral > social_paid,6,False,0.0,
+PATH-0226,email > email > direct > referral,4,False,0.0,
+PATH-0227,paid_search > email > display > organic_search > paid_search > referral > social_organic,7,True,306.82,27.0
+PATH-0228,paid_search > social_organic > email,3,True,162.7,8.0
+PATH-0229,display > paid_search,2,True,313.88,23.0
+PATH-0230,organic_search > social_paid,2,False,0.0,
+PATH-0231,organic_search > direct > direct > paid_search > display > referral,6,False,0.0,
+PATH-0232,referral > paid_search > social_paid > social_paid,4,True,136.69,14.0
+PATH-0233,social_organic > social_paid > referral,3,False,0.0,
+PATH-0234,social_organic > email > social_organic > direct > email,5,False,0.0,
+PATH-0235,direct > display,2,False,0.0,
+PATH-0236,organic_search > direct > paid_search > paid_search > paid_search > paid_search > direct,7,True,250.02,28.0
+PATH-0237,display > paid_search > direct > paid_search > referral > direct > direct,7,True,300.56,23.0
+PATH-0238,organic_search > paid_search > display,3,True,429.38,28.0
+PATH-0239,referral > email > email > display > display > referral > email,7,True,342.25,22.0
+PATH-0240,referral > organic_search,2,False,0.0,
+PATH-0241,direct > social_paid > direct > organic_search > display > referral,6,False,0.0,
+PATH-0242,paid_search > referral > display > social_organic > paid_search,5,True,160.82,14.0
+PATH-0243,email > social_organic > organic_search > paid_search,4,False,0.0,
+PATH-0244,organic_search > paid_search > referral > social_organic > display > direct,6,False,0.0,
+PATH-0245,social_organic > referral > referral,3,True,140.39,23.0
+PATH-0246,referral > paid_search > referral > display,4,True,253.23,4.0
+PATH-0247,referral > organic_search > direct > direct > paid_search > social_organic,6,False,0.0,
+PATH-0248,organic_search > direct > paid_search > direct > social_paid > paid_search,6,False,0.0,
+PATH-0249,social_organic > email > organic_search > social_organic > direct > email,6,False,0.0,
+PATH-0250,email > paid_search > organic_search > referral > social_organic > social_organic,6,False,0.0,
+PATH-0251,social_paid > email > paid_search > referral > social_paid,5,False,0.0,
+PATH-0252,direct > paid_search > display > paid_search > paid_search,5,False,0.0,
+PATH-0253,organic_search > email > social_organic > social_organic > display,5,False,0.0,
+PATH-0254,display > display,2,False,0.0,
+PATH-0255,direct > email > social_organic > referral > referral > social_organic,6,False,0.0,
+PATH-0256,social_paid > direct > social_paid > social_paid > referral,5,True,294.05,28.0
+PATH-0257,social_organic > social_organic > direct > display > display,5,False,0.0,
+PATH-0258,direct > referral > email > referral > referral > email,6,True,143.73,23.0
+PATH-0259,display > direct > social_organic > display > email > paid_search > direct,7,False,0.0,
+PATH-0260,direct > organic_search > referral > organic_search > social_paid > email,6,True,153.38,2.0
+PATH-0261,email > email > display > social_paid > organic_search > paid_search > display,7,False,0.0,
+PATH-0262,referral > email > email > display > paid_search > direct > email,7,False,0.0,
+PATH-0263,social_paid > paid_search > paid_search > organic_search > referral,5,True,398.46,17.0
+PATH-0264,display > social_paid > social_paid,3,True,338.27,19.0
+PATH-0265,referral > social_organic > referral > social_organic > direct > direct > direct,7,False,0.0,
+PATH-0266,social_paid > social_organic > social_paid > social_paid > email,5,True,163.07,20.0
+PATH-0267,email > referral,2,True,494.48,29.0
+PATH-0268,referral > social_paid > display > referral > organic_search > social_organic,6,False,0.0,
+PATH-0269,email > organic_search > paid_search > paid_search > organic_search,5,False,0.0,
+PATH-0270,social_paid > display > paid_search,3,True,272.9,17.0
+PATH-0271,referral > email,2,False,0.0,
+PATH-0272,organic_search > organic_search > social_organic > organic_search,4,True,404.36,25.0
+PATH-0273,organic_search > organic_search > display > referral > display > display > social_paid,7,False,0.0,
+PATH-0274,social_organic > social_paid > direct > paid_search,4,True,273.27,8.0
+PATH-0275,direct > paid_search > email > display > email,5,True,144.8,19.0
+PATH-0276,social_organic > email > social_paid > email > paid_search > paid_search,6,True,182.21,30.0
+PATH-0277,email > social_organic > direct > paid_search > referral > organic_search > display,7,False,0.0,
+PATH-0278,paid_search > social_organic,2,True,386.6,19.0
+PATH-0279,paid_search > email > organic_search > paid_search,4,False,0.0,
+PATH-0280,email > direct > organic_search > referral > direct > paid_search,6,False,0.0,
+PATH-0281,social_paid > social_paid > social_paid > direct > organic_search > referral > direct,7,False,0.0,
+PATH-0282,email > social_organic > display > organic_search > paid_search > display,6,True,341.45,19.0
+PATH-0283,direct > social_paid > paid_search > social_paid > social_organic > referral,6,True,287.62,17.0
+PATH-0284,social_paid > paid_search > direct,3,False,0.0,
+PATH-0285,email > referral > social_paid > organic_search > social_paid > social_paid > email,7,False,0.0,
+PATH-0286,organic_search > display > email > email > organic_search,5,True,440.2,3.0
+PATH-0287,email > organic_search > social_paid > social_paid > direct,5,False,0.0,
+PATH-0288,paid_search > referral > direct > referral > email > paid_search,6,True,152.45,30.0
+PATH-0289,email > display > social_paid,3,False,0.0,
+PATH-0290,organic_search > email > direct > paid_search,4,False,0.0,
+PATH-0291,paid_search > organic_search,2,False,0.0,
+PATH-0292,social_paid > email > referral > social_organic > email > referral,6,True,195.63,25.0
+PATH-0293,organic_search > display > social_organic > direct > social_paid,5,True,213.57,23.0
+PATH-0294,social_organic > paid_search > social_organic > paid_search > social_paid > social_organic > direct,7,False,0.0,
+PATH-0295,email > display > social_organic > referral > referral > display,6,False,0.0,
+PATH-0296,referral > direct,2,False,0.0,
+PATH-0297,direct > organic_search,2,True,381.12,16.0
+PATH-0298,direct > email > social_organic,3,True,242.52,24.0
+PATH-0299,social_paid > organic_search > social_organic > referral > direct,5,False,0.0,
+PATH-0300,organic_search > email > paid_search > referral > display > direct,6,True,245.26,23.0
+PATH-0301,paid_search > social_paid,2,False,0.0,
+PATH-0302,organic_search > display > social_organic > referral > social_organic,5,True,158.47,7.0
+PATH-0303,email > paid_search > email > display > paid_search > direct,6,False,0.0,
+PATH-0304,organic_search > direct > direct > referral,4,False,0.0,
+PATH-0305,paid_search > paid_search > email > direct > paid_search > paid_search > social_organic,7,False,0.0,
+PATH-0306,social_paid > social_paid > referral,3,False,0.0,
+PATH-0307,direct > referral > referral > display > social_paid,5,False,0.0,
+PATH-0308,social_organic > social_paid > direct > display > display > referral > organic_search,7,False,0.0,
+PATH-0309,referral > social_organic > email > social_paid,4,False,0.0,
+PATH-0310,social_paid > organic_search > display,3,True,105.28,20.0
+PATH-0311,paid_search > email > social_organic,3,False,0.0,
+PATH-0312,display > display > referral > paid_search > direct > organic_search > display,7,False,0.0,
+PATH-0313,paid_search > paid_search > email > direct > organic_search,5,False,0.0,
+PATH-0314,social_organic > social_organic > direct > email,4,True,453.89,29.0
+PATH-0315,organic_search > direct > organic_search,3,True,231.05,1.0
+PATH-0316,display > paid_search > paid_search,3,False,0.0,
+PATH-0317,referral > direct > organic_search > display,4,False,0.0,
+PATH-0318,display > social_organic > organic_search > direct > email > referral,6,False,0.0,
+PATH-0319,paid_search > direct,2,False,0.0,
+PATH-0320,email > paid_search,2,False,0.0,
+PATH-0321,social_organic > social_organic > referral > social_organic > social_paid > referral,6,False,0.0,
+PATH-0322,paid_search > organic_search > paid_search > social_organic > social_paid > email,6,False,0.0,
+PATH-0323,social_organic > social_paid > display > paid_search > paid_search > social_paid > paid_search,7,False,0.0,
+PATH-0324,social_paid > organic_search > paid_search > social_paid,4,False,0.0,
+PATH-0325,direct > paid_search > paid_search > display > social_organic > organic_search,6,False,0.0,
+PATH-0326,direct > referral > social_organic > organic_search,4,True,413.16,8.0
+PATH-0327,direct > referral > direct > referral,4,True,92.76,23.0
+PATH-0328,organic_search > social_paid > direct > social_paid > display > display > email,7,False,0.0,
+PATH-0329,social_organic > social_organic > organic_search > referral,4,False,0.0,
+PATH-0330,paid_search > display > social_organic > direct > organic_search,5,True,190.49,14.0
+PATH-0331,organic_search > referral,2,False,0.0,
+PATH-0332,organic_search > referral > organic_search > direct > display > social_organic > email,7,False,0.0,
+PATH-0333,social_organic > referral > paid_search > direct > email,5,False,0.0,
+PATH-0334,social_paid > direct > display > social_organic > display > social_paid > referral,7,False,0.0,
+PATH-0335,social_organic > social_paid > display > direct,4,True,84.27,12.0
+PATH-0336,direct > display,2,True,453.61,25.0
+PATH-0337,email > social_organic > referral > direct > organic_search > organic_search,6,True,466.25,22.0
+PATH-0338,direct > email > social_organic > paid_search > referral,5,True,205.73,30.0
+PATH-0339,organic_search > social_paid > social_paid > social_organic > social_organic > display > referral,7,False,0.0,
+PATH-0340,direct > social_organic > email > social_organic > social_organic,5,False,0.0,
+PATH-0341,email > direct > email,3,True,389.18,19.0
+PATH-0342,paid_search > direct > paid_search,3,False,0.0,
+PATH-0343,organic_search > direct > paid_search > email > direct > referral,6,True,430.13,28.0
+PATH-0344,email > organic_search > direct > social_paid > social_paid,5,True,70.47,11.0
+PATH-0345,social_paid > paid_search,2,False,0.0,
+PATH-0346,referral > email > paid_search > email,4,True,161.18,23.0
+PATH-0347,social_organic > referral > paid_search,3,True,228.84,5.0
+PATH-0348,email > email > social_organic,3,True,460.67,22.0
+PATH-0349,social_paid > social_paid > social_organic,3,False,0.0,
+PATH-0350,social_organic > direct > email > social_organic > email > paid_search,6,False,0.0,
+PATH-0351,social_paid > social_organic > organic_search > email > referral > direct,6,False,0.0,
+PATH-0352,email > direct,2,True,75.75,27.0
+PATH-0353,display > email > social_paid > organic_search,4,False,0.0,
+PATH-0354,organic_search > paid_search > paid_search > social_paid,4,True,326.43,16.0
+PATH-0355,social_organic > social_paid > referral > email,4,False,0.0,
+PATH-0356,organic_search > display > direct > organic_search > paid_search,5,True,227.52,22.0
+PATH-0357,referral > display > email > social_organic > display > direct,6,False,0.0,
+PATH-0358,email > social_paid > display > social_paid,4,True,220.3,2.0
+PATH-0359,direct > direct > social_organic > paid_search,4,False,0.0,
+PATH-0360,organic_search > social_paid > email > email > paid_search > direct,6,True,290.07,19.0
+PATH-0361,social_organic > social_organic > email > direct > organic_search > organic_search > social_paid,7,False,0.0,
+PATH-0362,social_paid > social_paid > paid_search > display,4,False,0.0,
+PATH-0363,display > display > paid_search > referral,4,False,0.0,
+PATH-0364,social_paid > organic_search > social_organic > social_organic > referral,5,True,202.24,16.0
+PATH-0365,display > paid_search > direct > display > paid_search,5,False,0.0,
+PATH-0366,paid_search > email,2,False,0.0,
+PATH-0367,email > paid_search > referral,3,False,0.0,
+PATH-0368,email > email,2,True,131.38,26.0
+PATH-0369,direct > display > social_organic > direct > organic_search > social_organic,6,False,0.0,
+PATH-0370,direct > social_organic > display > social_organic > social_paid,5,False,0.0,
+PATH-0371,social_paid > social_paid > social_organic > email > email > email > social_paid,7,False,0.0,
+PATH-0372,social_organic > direct > social_paid > direct > email > display,6,True,223.23,25.0
+PATH-0373,referral > direct,2,True,204.41,7.0
+PATH-0374,email > direct > email > display > email,5,False,0.0,
+PATH-0375,direct > referral > social_paid > display,4,False,0.0,
+PATH-0376,social_organic > paid_search > social_paid > referral > paid_search > organic_search > referral,7,False,0.0,
+PATH-0377,social_paid > social_paid > organic_search > referral > display > email,6,True,194.12,15.0
+PATH-0378,paid_search > paid_search > direct,3,True,168.66,28.0
+PATH-0379,social_paid > email > referral > social_paid,4,False,0.0,
+PATH-0380,social_paid > direct > referral,3,False,0.0,
+PATH-0381,email > paid_search,2,False,0.0,
+PATH-0382,paid_search > social_paid,2,False,0.0,
+PATH-0383,direct > email > display > paid_search > email > referral > organic_search,7,False,0.0,
+PATH-0384,referral > social_organic,2,False,0.0,
+PATH-0385,referral > email > social_organic > social_organic,4,False,0.0,
+PATH-0386,organic_search > direct > paid_search,3,False,0.0,
+PATH-0387,organic_search > social_organic > email,3,False,0.0,
+PATH-0388,social_paid > organic_search,2,False,0.0,
+PATH-0389,social_organic > referral > direct > social_organic,4,True,52.15,24.0
+PATH-0390,social_organic > direct > social_organic > organic_search > paid_search > direct > organic_search,7,False,0.0,
+PATH-0391,display > organic_search > direct > email,4,True,235.01,24.0
+PATH-0392,paid_search > email > referral,3,True,406.41,5.0
+PATH-0393,display > referral > social_organic > email > social_paid,5,False,0.0,
+PATH-0394,paid_search > direct > organic_search > direct > display > social_paid,6,True,234.97,21.0
+PATH-0395,display > social_paid > display > email,4,False,0.0,
+PATH-0396,referral > display > display > paid_search > referral > display,6,False,0.0,
+PATH-0397,social_organic > display > referral > paid_search > referral > email > direct,7,False,0.0,
+PATH-0398,social_paid > email > paid_search > social_paid > direct,5,True,180.26,8.0
+PATH-0399,organic_search > organic_search > display > social_organic > display > organic_search > social_organic,7,True,94.82,22.0
+PATH-0400,direct > social_paid > paid_search > direct > organic_search,5,True,120.09,15.0
+PATH-0401,display > referral > social_paid > social_paid > paid_search > display,6,True,443.01,25.0
+PATH-0402,paid_search > referral > paid_search > referral,4,False,0.0,
+PATH-0403,social_organic > email > referral > social_paid > referral > social_paid > paid_search,7,False,0.0,
+PATH-0404,organic_search > referral > social_organic > display > social_paid,5,False,0.0,
+PATH-0405,email > social_organic > social_organic,3,False,0.0,
+PATH-0406,paid_search > social_paid > direct > social_paid > social_paid,5,False,0.0,
+PATH-0407,display > organic_search > paid_search,3,False,0.0,
+PATH-0408,referral > organic_search > referral > referral > organic_search,5,False,0.0,
+PATH-0409,display > paid_search > organic_search > email > display,5,True,439.31,5.0
+PATH-0410,organic_search > direct > social_paid > social_paid > social_paid > social_organic > referral,7,True,381.15,6.0
+PATH-0411,paid_search > display > organic_search > direct,4,False,0.0,
+PATH-0412,paid_search > paid_search > paid_search > display,4,False,0.0,
+PATH-0413,social_paid > referral,2,False,0.0,
+PATH-0414,paid_search > display,2,True,199.82,8.0
+PATH-0415,organic_search > social_paid > direct,3,False,0.0,
+PATH-0416,email > social_organic > social_organic > social_organic > social_paid > social_organic > organic_search,7,True,380.78,22.0
+PATH-0417,display > organic_search > display > paid_search,4,False,0.0,
+PATH-0418,email > email,2,False,0.0,
+PATH-0419,social_organic > paid_search > paid_search > display,4,False,0.0,
+PATH-0420,email > social_paid > paid_search > display > email > email > direct,7,True,243.9,2.0
+PATH-0421,referral > social_organic > social_organic > social_organic > social_paid,5,False,0.0,
+PATH-0422,direct > social_paid > display > organic_search > email > social_paid,6,False,0.0,
+PATH-0423,social_organic > organic_search > display > social_paid > paid_search > direct,6,True,440.65,17.0
+PATH-0424,organic_search > organic_search > display > social_paid > paid_search > paid_search > social_organic,7,False,0.0,
+PATH-0425,social_organic > social_paid > social_organic > display > direct,5,False,0.0,
+PATH-0426,paid_search > direct > paid_search > referral,4,True,445.44,15.0
+PATH-0427,referral > email,2,False,0.0,
+PATH-0428,organic_search > email,2,True,312.29,15.0
+PATH-0429,email > email,2,True,428.03,20.0
+PATH-0430,social_organic > social_paid > direct > social_organic > referral > display > referral,7,False,0.0,
+PATH-0431,direct > display,2,False,0.0,
+PATH-0432,direct > email > organic_search > organic_search > direct,5,True,293.83,19.0
+PATH-0433,direct > social_organic > referral > display > organic_search > organic_search,6,True,147.48,23.0
+PATH-0434,social_organic > organic_search,2,False,0.0,
+PATH-0435,referral > display,2,True,491.42,23.0
+PATH-0436,social_organic > referral > referral,3,False,0.0,
+PATH-0437,email > referral > display > direct > display > organic_search,6,False,0.0,
+PATH-0438,social_organic > organic_search > paid_search > referral > paid_search > display,6,True,243.57,15.0
+PATH-0439,direct > paid_search > organic_search > referral > referral,5,True,285.66,7.0
+PATH-0440,direct > organic_search > direct > social_organic > email,5,False,0.0,
+PATH-0441,email > referral > social_organic > organic_search,4,True,52.02,19.0
+PATH-0442,organic_search > paid_search > referral,3,True,244.73,14.0
+PATH-0443,social_organic > referral > direct > direct > social_paid > social_paid > direct,7,False,0.0,
+PATH-0444,paid_search > social_organic,2,False,0.0,
+PATH-0445,direct > social_organic > display > email,4,False,0.0,
+PATH-0446,referral > social_paid > social_organic > email,4,True,375.85,30.0
+PATH-0447,display > paid_search > display > direct > direct > organic_search,6,False,0.0,
+PATH-0448,display > display > email > social_paid,4,True,462.58,14.0
+PATH-0449,display > referral,2,False,0.0,
+PATH-0450,social_paid > social_organic > social_paid > email,4,True,195.31,17.0
+PATH-0451,email > social_organic > display,3,False,0.0,
+PATH-0452,social_organic > direct > social_organic > paid_search,4,False,0.0,
+PATH-0453,email > email > display > organic_search > paid_search > social_paid,6,False,0.0,
+PATH-0454,email > paid_search > referral > email > direct,5,False,0.0,
+PATH-0455,referral > paid_search > social_paid > paid_search > direct,5,False,0.0,
+PATH-0456,display > organic_search > paid_search,3,False,0.0,
+PATH-0457,direct > social_organic > social_organic > display > direct > direct > direct,7,True,457.29,26.0
+PATH-0458,display > organic_search > direct,3,False,0.0,
+PATH-0459,display > social_paid > email > social_organic > display > paid_search > social_paid,7,False,0.0,
+PATH-0460,social_organic > paid_search > social_organic > paid_search,4,True,446.1,21.0
+PATH-0461,referral > email > organic_search > paid_search,4,False,0.0,
+PATH-0462,referral > direct > social_paid > referral > social_paid > social_paid > email,7,True,241.05,21.0
+PATH-0463,display > social_organic > social_paid > referral > direct,5,False,0.0,
+PATH-0464,organic_search > direct,2,True,298.09,17.0
+PATH-0465,paid_search > social_paid > email > social_paid,4,False,0.0,
+PATH-0466,email > social_paid > social_paid > email > social_organic > paid_search > direct,7,False,0.0,
+PATH-0467,paid_search > social_organic > email > display,4,True,168.65,12.0
+PATH-0468,social_paid > direct > social_paid > social_organic > social_paid,5,True,124.18,4.0
+PATH-0469,direct > email > social_organic > organic_search > display > social_organic > social_organic,7,False,0.0,
+PATH-0470,referral > paid_search > paid_search,3,False,0.0,
+PATH-0471,direct > social_paid > direct > direct > paid_search > direct > direct,7,False,0.0,
+PATH-0472,social_paid > display > referral > display,4,False,0.0,
+PATH-0473,social_organic > email > email,3,False,0.0,
+PATH-0474,organic_search > social_paid > referral > referral > paid_search,5,False,0.0,
+PATH-0475,social_organic > paid_search > referral > paid_search > display > social_organic,6,False,0.0,
+PATH-0476,referral > referral > social_paid > display > social_paid,5,False,0.0,
+PATH-0477,social_paid > referral > organic_search > display > email > direct > paid_search,7,False,0.0,
+PATH-0478,direct > direct,2,True,373.39,25.0
+PATH-0479,social_organic > direct > paid_search > display > organic_search > email > referral,7,True,478.78,11.0
+PATH-0480,organic_search > email > social_paid > social_paid > email > paid_search > referral,7,False,0.0,
+PATH-0481,social_paid > direct > social_organic > display > display > display,6,False,0.0,
+PATH-0482,organic_search > social_paid > referral > paid_search > direct > paid_search,6,True,373.14,4.0
+PATH-0483,direct > organic_search,2,True,277.07,14.0
+PATH-0484,social_paid > organic_search > paid_search > organic_search > social_paid > email > organic_search,7,False,0.0,
+PATH-0485,email > social_paid,2,True,363.78,22.0
+PATH-0486,referral > organic_search,2,False,0.0,
+PATH-0487,display > email > social_paid > paid_search > paid_search > paid_search > direct,7,False,0.0,
+PATH-0488,display > referral > email > social_paid,4,True,346.65,20.0
+PATH-0489,direct > paid_search > organic_search > display,4,True,105.93,15.0
+PATH-0490,referral > organic_search > referral,3,False,0.0,
+PATH-0491,paid_search > display > social_organic > display,4,False,0.0,
+PATH-0492,social_paid > social_paid > social_paid > social_organic > referral > direct > social_paid,7,False,0.0,
+PATH-0493,email > social_paid > organic_search > referral,4,True,368.99,19.0
+PATH-0494,email > social_organic > social_paid > social_paid > referral,5,False,0.0,
+PATH-0495,direct > organic_search > direct,3,True,347.16,19.0
+PATH-0496,organic_search > direct > display > social_paid > referral > social_paid,6,False,0.0,
+PATH-0497,social_organic > paid_search > direct > display > organic_search > organic_search > display,7,True,153.62,13.0
+PATH-0498,email > direct > direct > referral > paid_search,5,True,138.75,30.0
+PATH-0499,social_organic > paid_search > social_organic > email > referral > display,6,False,0.0,
+PATH-0500,referral > social_paid > email > organic_search,4,True,274.65,17.0
