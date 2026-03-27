@@ -165,11 +165,12 @@ def render_attribution():
     with col1:
         st.subheader("Average Attribution Share")
         avg_by_channel = df.groupby("channel")["attribution_share"].mean().sort_values(ascending=True)
-        fig = px.barh(
+        fig = px.bar(
             x=avg_by_channel.values,
             y=avg_by_channel.index,
             labels={"x": "Avg Attribution Share", "y": "Channel"},
             title="Channel Ranking (Avg Across Models)",
+            orientation="h",
         )
         fig.update_layout(height=400)
         st.plotly_chart(fig, use_container_width=True)
