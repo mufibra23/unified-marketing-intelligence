@@ -350,7 +350,7 @@ def render_ai_analyst():
             st.markdown(prompt)
 
         with st.chat_message("assistant"):
-            api_key = os.environ.get("ANTHROPIC_API_KEY")
+            api_key = os.environ.get("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
             if not api_key:
                 st.error("ANTHROPIC_API_KEY not set. Add it to your .env file or Streamlit secrets.")
                 return
