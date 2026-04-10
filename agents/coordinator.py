@@ -25,7 +25,7 @@ from mcp_tools.server import call_tool
 # CONFIG
 # ─────────────────────────────────────────────
 
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-6-20250217"
 MAX_TOKENS = 4096
 
 # Load prompts
