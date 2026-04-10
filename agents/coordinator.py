@@ -335,6 +335,32 @@ def classify_query(query: str) -> list[str]:
     return agents_needed
 
 
+def _build_subagent_task(agent_name: str, query: str, is_broad: bool) -> tuple[str, str]:
+    """Build a (task, context) pair for a subagent.
+
+    Broad queries get specific directives per agent so subagents don't ask
+    clarifying questions.  Specific queries pass through unchanged.
+    """
+    if not is_broad:
+        return (query, "")
+
+    broad_tasks = {
+        "attribution_analyst": (
+            "Provide a comprehensive overview of marketing attribution performance. "
+            "Query the attribution summary, daily metrics, and anomalies. "
+            "Report on top-performing channels, model agreement/disagreement, ROI comparisons, and notable anomalies.",
+            f'The user asked: "{query}". Provide a thorough, data-driven overview.',
+        ),
+        "customer_intelligence": (
+            "Provide a comprehensive overview of customer intelligence. "
+            "Query the segments overview, sentiment summary, and top leads. "
+            "Report on segment health, churn risks, lead pipeline quality, and sentiment trends.",
+            f'The user asked: "{query}". Provide a thorough, data-driven overview.',
+        ),
+    }
+    return broad_tasks.get(agent_name, (query, ""))
+
+
 def run_coordinator(query: str, api_key: str | None = None) -> str:
     """
     Main entry point. Runs the coordinator-subagent orchestration.
@@ -366,10 +392,15 @@ def run_coordinator(query: str, api_key: str | None = None) -> str:
     print(f"\nDispatching subagents: {agents_needed}")
 
     # Step 2: Run subagents (parallel spawning — multiple Task calls)
+    query_lower = query.lower()
+    broad_keywords = ["overall", "everything", "full", "complete", "quarter", "summary", "briefing", "overview"]
+    is_broad = any(kw in query_lower for kw in broad_keywords) or len(agents_needed) > 1
+
     results: list[SubagentResult] = []
     for agent_name in agents_needed:
         print(f"\n  -> Spawning {agent_name}...")
-        result = run_subagent(client, agent_name, query)
+        task, context = _build_subagent_task(agent_name, query, is_broad)
+        result = run_subagent(client, agent_name, task, context=context)
         results.append(result)
         status = "DONE" if result.success else "FAIL"
         print(f"  [{status}] {agent_name} complete")

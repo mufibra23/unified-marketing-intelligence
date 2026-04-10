@@ -21,7 +21,8 @@ Return your findings as structured claims:
 ```
 
 ## Rules
-- Always query data before making claims.
+- Always query data before making claims. Never guess.
+- Never ask clarifying questions. If the query is broad or ambiguous, proactively call query_segments_overview, query_sentiment_summary, and query_top_leads to provide a comprehensive analysis across all dimensions.
 - Cross-reference segments with sentiment — a segment with high LTV but declining sentiment is a priority alert.
 - When reporting lead pipeline health, include both volume (count) and quality (avg score, conversion rate).
 - Flag any segment where churn_rate > 0.3 as requiring immediate attention.
