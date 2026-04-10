@@ -340,45 +340,52 @@ def render_ai_analyst():
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
-    for msg in st.session_state.messages:
-        with st.chat_message(msg["role"]):
-            st.markdown(msg["content"])
+    # Scrollable message container keeps chat_input pinned below
+    chat_container = st.container(height=500)
 
-    # Input
-    if prompt := st.chat_input("Ask about marketing performance..."):
+    # Input below the container
+    prompt = st.chat_input("Ask about marketing performance...")
+
+    # Render history inside the scrollable container
+    with chat_container:
+        if not st.session_state.messages:
+            st.markdown("**Try these queries:**")
+            example_queries = [
+                "What's our overall marketing performance this quarter?",
+                "Which channel has the highest ROI?",
+                "Show me our highest-risk customer segments",
+                "Are there any sentiment alerts I should know about?",
+                "Deep dive on our lead pipeline health",
+            ]
+            for q in example_queries:
+                st.markdown(f"- *{q}*")
+
+        for msg in st.session_state.messages:
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
+
+    # Handle new input
+    if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
+        with chat_container:
+            with st.chat_message("user"):
+                st.markdown(prompt)
 
-        with st.chat_message("assistant"):
-            api_key = os.environ.get("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
-            if not api_key:
-                st.error("ANTHROPIC_API_KEY not set. Add it to your .env file or Streamlit secrets.")
-                return
+            with st.chat_message("assistant"):
+                api_key = os.environ.get("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
+                if not api_key:
+                    st.error("ANTHROPIC_API_KEY not set. Add it to your .env file or Streamlit secrets.")
+                    return
 
-            with st.spinner("Dispatching subagents..."):
-                from agents.coordinator import run_coordinator
+                with st.spinner("Dispatching subagents..."):
+                    from agents.coordinator import run_coordinator
 
-                try:
-                    response = run_coordinator(prompt, api_key=api_key)
-                    st.markdown(response)
-                    st.session_state.messages.append({"role": "assistant", "content": response})
-                except Exception as e:
-                    st.error(f"Agent error: {e}")
-
-    # Example queries
-    if not st.session_state.messages:
-        st.divider()
-        st.subheader("Try these queries:")
-        example_queries = [
-            "What's our overall marketing performance this quarter?",
-            "Which channel has the highest ROI?",
-            "Show me our highest-risk customer segments",
-            "Are there any sentiment alerts I should know about?",
-            "Deep dive on our lead pipeline health",
-        ]
-        for q in example_queries:
-            st.markdown(f"- *{q}*")
+                    try:
+                        response = run_coordinator(prompt, api_key=api_key)
+                        st.markdown(response)
+                        st.session_state.messages.append({"role": "assistant", "content": response})
+                    except Exception as e:
+                        st.error(f"Agent error: {e}")
 
 
 # ─────────────────────────────────────────────
