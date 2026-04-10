@@ -7,7 +7,9 @@ Run: streamlit run streamlit_app/app.py
 
 import json
 import os
+import re
 import sys
+import time
 
 import pandas as pd
 import plotly.express as px
@@ -329,63 +331,242 @@ def render_sentiment():
 # TAB 5: AI ANALYST (Chat Interface)
 # ─────────────────────────────────────────────
 
-def render_ai_analyst():
-    st.header("🤖 AI Marketing Analyst")
-    st.caption(
-        "Ask questions about your marketing performance. "
-        "The AI coordinator dispatches specialized subagents to gather data and synthesize insights."
+# Confidence badge mapping
+_CONFIDENCE_BADGES = {
+    "HIGH": "🟢 High",
+    "MEDIUM": "🟡 Medium",
+    "LOW": "🔴 Low",
+}
+
+
+def _clean_response(text: str) -> str:
+    """Convert raw coordinator output (with JSON claim blocks) into clean markdown.
+
+    Handles three formats:
+    1. ```json { "claim": ..., "evidence": ..., "confidence": ... } ```
+    2. Bare JSON objects on their own lines (no fences)
+    3. Already-clean markdown (passed through unchanged)
+    """
+
+    def _format_claim(obj: dict) -> str:
+        """Render a single claim dict as a clean markdown bullet."""
+        claim = obj.get("claim", "")
+        evidence = obj.get("evidence", "")
+        confidence = obj.get("confidence", "").upper()
+        badge = _CONFIDENCE_BADGES.get(confidence, confidence)
+        source = obj.get("source", "")
+
+        parts = [f"- **{claim}**"]
+        if evidence:
+            parts.append(f"  {evidence}")
+        meta = []
+        if badge:
+            meta.append(badge)
+        if source:
+            meta.append(f"Source: *{source}*")
+        if meta:
+            parts.append(f"  {' · '.join(meta)}")
+        return "\n".join(parts)
+
+    # 1) Replace fenced ```json ... ``` blocks containing claim objects
+    def _replace_fenced(match: re.Match) -> str:
+        raw = match.group(1).strip()
+        try:
+            obj = json.loads(raw)
+            if isinstance(obj, dict) and "claim" in obj:
+                return _format_claim(obj)
+        except json.JSONDecodeError:
+            pass
+        return match.group(0)  # leave non-claim JSON fences alone
+
+    text = re.sub(
+        r"```json\s*(\{[\s\S]*?\})\s*```",
+        _replace_fenced,
+        text,
     )
 
-    # Chat history
+    # 2) Replace bare inline JSON objects (line starts with { and contains "claim")
+    def _replace_bare(match: re.Match) -> str:
+        raw = match.group(0).strip()
+        try:
+            obj = json.loads(raw)
+            if isinstance(obj, dict) and "claim" in obj:
+                return _format_claim(obj)
+        except json.JSONDecodeError:
+            pass
+        return match.group(0)
+
+    text = re.sub(
+        r'^\s*\{[^{}]*"claim"[^{}]*\}\s*$',
+        _replace_bare,
+        text,
+        flags=re.MULTILINE,
+    )
+
+    # 3) Collapse excessive blank lines
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    return text.strip()
+
+
+def render_ai_analyst():
+    # Custom CSS for the chat tab
+    st.markdown("""
+    <style>
+        /* Thinking indicator animation */
+        @keyframes pulse {
+            0%, 100% { opacity: .4; }
+            50% { opacity: 1; }
+        }
+        .thinking-step {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            color: #888;
+            font-size: 0.85rem;
+        }
+        .thinking-step.active { color: #d4d4d4; }
+        .thinking-step.active .dot {
+            animation: pulse 1.2s ease-in-out infinite;
+        }
+        .thinking-step.done { color: #6cc070; }
+        .thinking-step .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+        /* Welcome card */
+        .welcome-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+        .welcome-card h3 { margin-top: 0; color: #e0e0e0; }
+        .welcome-card p { color: #aaa; font-size: 0.9rem; }
+        .example-chip {
+            display: inline-block;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 6px 14px;
+            margin: 4px;
+            font-size: 0.82rem;
+            color: #ccc;
+            cursor: default;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.header("🤖 AI Marketing Analyst")
+    st.caption("Powered by multi-agent orchestration — your questions are routed to specialized analysts.")
+
+    # Session state
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
-    # Scrollable message container keeps chat_input pinned below
-    chat_container = st.container(height=500)
+    # Scrollable message area
+    chat_container = st.container(height=520)
 
-    # Input below the container
+    # Chat input — always pinned below the container
     prompt = st.chat_input("Ask about marketing performance...")
 
-    # Render history inside the scrollable container
+    # Render messages
     with chat_container:
+        # Welcome state
         if not st.session_state.messages:
-            st.markdown("**Try these queries:**")
-            example_queries = [
-                "What's our overall marketing performance this quarter?",
-                "Which channel has the highest ROI?",
-                "Show me our highest-risk customer segments",
-                "Are there any sentiment alerts I should know about?",
-                "Deep dive on our lead pipeline health",
-            ]
-            for q in example_queries:
-                st.markdown(f"- *{q}*")
+            st.markdown("""
+            <div class="welcome-card">
+                <h3>Welcome to AI Marketing Analyst</h3>
+                <p>I can analyze attribution data, customer segments, lead pipelines,
+                   and sentiment across your entire marketing stack. Try asking:</p>
+                <div style="margin-top:12px">
+                    <span class="example-chip">What's our overall marketing performance?</span>
+                    <span class="example-chip">Which channel has the highest ROI?</span>
+                    <span class="example-chip">Show me high-risk customer segments</span>
+                    <span class="example-chip">Any sentiment alerts I should know about?</span>
+                    <span class="example-chip">Deep dive on lead pipeline health</span>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
 
         for msg in st.session_state.messages:
-            with st.chat_message(msg["role"]):
+            with st.chat_message(msg["role"], avatar="🧑‍💼" if msg["role"] == "user" else "🤖"):
                 st.markdown(msg["content"])
 
-    # Handle new input
+    # Handle new query
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
         with chat_container:
-            with st.chat_message("user"):
+            with st.chat_message("user", avatar="🧑‍💼"):
                 st.markdown(prompt)
 
-            with st.chat_message("assistant"):
+            with st.chat_message("assistant", avatar="🤖"):
                 api_key = os.environ.get("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
                 if not api_key:
-                    st.error("ANTHROPIC_API_KEY not set. Add it to your .env file or Streamlit secrets.")
+                    st.error("ANTHROPIC_API_KEY not set. Add it to your .env or Streamlit secrets.")
                     return
 
-                with st.spinner("Dispatching subagents..."):
+                # Animated thinking indicator
+                from agents.coordinator import classify_query
+
+                agents_needed = classify_query(prompt)
+                agent_labels = {
+                    "attribution_analyst": "Attribution Analyst",
+                    "customer_intelligence": "Customer Intelligence Analyst",
+                    "report_synthesizer": "Report Synthesizer",
+                }
+
+                thinking_placeholder = st.empty()
+                steps = ["Analyzing your question..."]
+                for a in agents_needed:
+                    steps.append(f"Dispatching {agent_labels.get(a, a)}...")
+                if len(agents_needed) > 1:
+                    steps.append("Synthesizing findings...")
+                steps.append("Preparing response...")
+
+                def _render_thinking(current_idx: int):
+                    html = ""
+                    for i, step in enumerate(steps):
+                        if i < current_idx:
+                            html += f'<div class="thinking-step done"><span class="dot"></span> ✓ {step}</div>'
+                        elif i == current_idx:
+                            html += f'<div class="thinking-step active"><span class="dot"></span> {step}</div>'
+                        else:
+                            html += f'<div class="thinking-step"><span class="dot"></span> {step}</div>'
+                    thinking_placeholder.markdown(html, unsafe_allow_html=True)
+
+                # Show initial thinking state
+                _render_thinking(0)
+
+                try:
                     from agents.coordinator import run_coordinator
 
-                    try:
-                        response = run_coordinator(prompt, api_key=api_key)
-                        st.markdown(response)
-                        st.session_state.messages.append({"role": "assistant", "content": response})
-                    except Exception as e:
-                        st.error(f"Agent error: {e}")
+                    # Step through the thinking stages while the coordinator runs
+                    # Advance to "Dispatching..." before the blocking call
+                    time.sleep(0.4)
+                    _render_thinking(1)
+
+                    response_raw = run_coordinator(prompt, api_key=api_key)
+
+                    # Advance remaining steps quickly
+                    for i in range(2, len(steps)):
+                        time.sleep(0.3)
+                        _render_thinking(i)
+                    time.sleep(0.2)
+
+                    # Clear thinking indicator and show the response
+                    thinking_placeholder.empty()
+                    cleaned = _clean_response(response_raw)
+                    st.markdown(cleaned)
+                    st.session_state.messages.append({"role": "assistant", "content": cleaned})
+
+                except Exception as e:
+                    thinking_placeholder.empty()
+                    st.error(f"Agent error: {e}")
 
 
 # ─────────────────────────────────────────────
