@@ -65,7 +65,6 @@ SUBAGENT_DEFINITIONS = {
         "description": "Synthesizes findings into CMO-level reports with source attribution",
         "system_prompt_file": "report_synthesizer.md",
         "allowed_tools": [
-            "write_report",
             "verify_fact",
         ],
     },
